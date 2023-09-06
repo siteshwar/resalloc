@@ -1,0 +1,9 @@
+---
+basic:
+    max: 15
+    max_prealloc: 5
+    cmd_new: "echo >&2 before; env | grep RESALLOC_; echo >&2 after"
+    cmd_delete: "echo >&2 stderr; echo stdout"
+    tags:
+        - A
+        - B

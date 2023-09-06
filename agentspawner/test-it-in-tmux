@@ -1,0 +1,4 @@
+#! /bin/sh -x
+
+tmux new-session -n "resalloc-server" ./resalloc-testing-server ';' \
+     new-window -n "agent spawner" python3 ./daemon.py

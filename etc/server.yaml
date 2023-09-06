@@ -1,0 +1,5 @@
+---
+db_url: "sqlite:////tmp/server-sql"
+logdir: /tmp/logdir
+port: 49100
+loglevel: debug

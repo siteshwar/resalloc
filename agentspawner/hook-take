@@ -1,0 +1,4 @@
+#! /bin/sh
+
+eval 'set -- $1'  # strip
+echo "Taking with resalloc ticket data: $1"

@@ -1,0 +1,8 @@
+#! /bin/bash
+
+eval 'set -- $1'  # strip
+echo "Releasing with resalloc ticket data: $1"
+
+# ~33% chance of closing this one
+test $(( RANDOM % 3 )) -eq 0 && exit 0
+exit 1

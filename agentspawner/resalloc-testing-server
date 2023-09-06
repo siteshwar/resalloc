@@ -1,0 +1,6 @@
+#! /bin/sh
+
+cd ..
+rm /tmp/server-sql
+mkdir -p /tmp/logdir
+./test-tooling/resalloc-server

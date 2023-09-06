@@ -100,6 +100,9 @@ class SpawnerPool:
                 self.start(todo)
             elif todo < 0:
                 self.try_to_stop(-todo)
+
+            # TODO: we should check that tickets aren't in FAILED state
+
             took = time.time() - start
             sleep = self.sleep - took
             if sleep > 0:

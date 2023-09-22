@@ -1,3 +1,3 @@
 #! /bin/sh
-
-echo 3
+cd /root/openscanhub
+podman exec -it osh-hub env PYTHONPATH=.:kobo python3 osh/hub/scripts/osh-resalloc --workers-needed

@@ -2,3 +2,5 @@
 
 eval 'set -- $1'  # strip
 echo "Taking with resalloc ticket data: $1"
+cd /root/openscanhub
+podman exec -it osh-hub env PYTHONPATH=.:kobo python3 osh/hub/scripts/osh-resalloc --create-worker $1

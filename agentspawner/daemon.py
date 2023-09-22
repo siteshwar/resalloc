@@ -23,7 +23,7 @@ class SpawnerPool:
     sleep = 30
 
     def __init__(self, resalloc_connection, logger):
-        self.tags = ["A"]
+        self.tags = ["arch_x86_64"]
         # TODO: use a persistent storage so we can restart the process
         self.tickets = []
         self.conn = resalloc_connection
@@ -32,8 +32,7 @@ class SpawnerPool:
     def call_converge_to(self):
         """ Execute the configured hook script """
         while True:
-            result = subprocess.run(["./hook-converge-to"], capture_output=True,
-                                    check=False)
+            result = subprocess.run(["./hook-converge-to"], stdout=subprocess.PIPE, check=False)
             if result.returncode == 0:
                 try:
                     return int(result.stdout.decode("utf-8").strip())
